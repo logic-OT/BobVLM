@@ -13,8 +13,7 @@ def load_model(model_name="selfDotOsman/BobVLM-1.5b", device=None):
     """
     if device is None:
         device = "cuda" if torch.cuda.is_available() else "cpu"
-    print(model_name)
-    model = AutoModelForVision2Seq.from_pretrained("selfDotOsman/BobVLM-1.5b", trust_remote_code=True).to(device)
-    print(model)
+
+    model = AutoModelForVision2Seq.from_pretrained(model, trust_remote_code=True).to(device)
     
     return model
