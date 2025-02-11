@@ -1,5 +1,5 @@
 # BobVLM ✨👀
-[[Article on Medium](https://medium.com/p/7d51099bfbcb/edit)] [[Demo on huggingface](https://medium.com/p/7d51099bfbcb/edit)] [[Model on huggingface](https://huggingface.co/selfDotOsman/BobVLM-1.5b)] 
+[[Article on Medium](https://medium.com/p/7d51099bfbcb/edit)] [[Demo on huggingface](https://huggingface.co/selfDotOsman/BobVLM-1.5b)] [[Model on huggingface](https://huggingface.co/selfDotOsman/BobVLM-1.5b)] 
 
 BobVLM is an ambitious passion project that experiments pre-training a good multimodal language model on limited resources and hardware and still achieve impressive performance. The result is a 1.5b model pre-trained on P100 GPU that is capable of detailed image description and moderate question answering.
 
