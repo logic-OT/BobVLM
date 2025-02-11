@@ -43,52 +43,55 @@ You can install the package directly from GitHub:
 pip install git+https://github.com/selfDotOsman/BobVLM.git
 ```
 
-Or directly from Hugging Face:
-
-```python
-from transformers import AutoModelForVision2Seq
-model = AutoModelForVision2Seq.from_pretrained("selfDotOsman/BobVLM-1.5b", trust_remote_code=True)
-```
-
 ## Usage
 
 ### Basic Usage
 
 ```python
-from BobVLM import pipeline
+from BobVLM import BobVLMProcessor, load_model, pipeline
+
+# Load model and processor
+model = load_model()
+processor = BobVLMProcessor()
 
 # Create pipeline
-vlm = pipeline()
+pipe = pipeline(model, processor)
 
-# You can use different types of image inputs:
-# 1. Local file
-response = vlm(
-    chat=[{"role": "user", "content": "What's in this image?"}],
-    images="path/to/your/image.jpg"
-)
-
-# 2. Image URL
-response = vlm(
-    chat=[{"role": "user", "content": "Describe this image"}],
-    images="https://example.com/image.jpg"
-)
-
-# 3. PIL Image
-from PIL import Image
-image = Image.open("your_image.jpg")
-response = vlm(
-    chat=[{"role": "user", "content": "What do you see?"}],
-    images=image
+# Example with URL image and system prompt
+response = pipe(
+    chat=[
+        {"role": "system", "content": "You are an image understanding assistant. You can see and interpret images in fine detail"},
+        {"role": "user", "content": "What's in this image?"},
+    ],
+    images="https://media.istockphoto.com/id/155439315/photo/passenger-airplane-flying-above-clouds-during-sunset.jpg"
 )
 
 print(response)
+```
+
+### Different Input Types
+
+```python
+# 1. Local file
+response = pipe(
+    chat=[{"role": "user", "content": "Describe this image"}],
+    images="path/to/your/image.jpg"
+)
+
+# 2. PIL Image
+from PIL import Image
+image = Image.open("your_image.jpg")
+response = pipe(
+    chat=[{"role": "user", "content": "What do you see?"}],
+    images=image
+)
 ```
 
 ### Multiple Images
 
 ```python
 # You can pass multiple images
-response = vlm(
+response = pipe(
     chat=[{"role": "user", "content": "Compare these images"}],
     images=["image1.jpg", "https://example.com/image2.jpg"]
 )
@@ -99,12 +102,13 @@ response = vlm(
 ```python
 # Chat with context
 messages = [
+    {"role": "system", "content": "You are an expert at analyzing images in detail."},
     {"role": "user", "content": "What's in this image?"},
     {"role": "assistant", "content": "I see a dog playing in a park."},
     {"role": "user", "content": "What breed is it?"}
 ]
 
-response = vlm(
+response = pipe(
     chat=messages,
     images="dog.jpg"
 )
