@@ -1,11 +1,9 @@
-from .processor import BobVLMProcessor
-from .model import load_model
 from PIL import Image
 import os
 from transformers.image_utils import load_image
 from typing import Union, List
 
-def pipeline(model_name="selfDotOsman/BobVLM-1.5b", device=None):
+def pipeline(model,processor, device=None):
     """Create a pipeline for easy inference with BobVLM.
     
     Args:
@@ -15,8 +13,6 @@ def pipeline(model_name="selfDotOsman/BobVLM-1.5b", device=None):
     Returns:
         callable: A function that processes inputs and returns generated text
     """
-    processor = BobVLMProcessor(model_name)
-    model = load_model(model_name, device)
     
     def process_image(image_input: Union[str, Image.Image]) -> Image.Image:
         """Process different types of image inputs into PIL Image.
