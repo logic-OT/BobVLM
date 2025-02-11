@@ -50,7 +50,10 @@ response = pipe(
 
 print(response)
 ```
-
+**Model Output**
+```
+The image depicts a plane flying over a mountainous landscape, with a large airplane (a Boeing 737) in the foreground. The plane is flying towards the horizon, and the mountain range is visible in the background.<|eot_id|>
+```
 ### Different Input Types
 
 ```python
