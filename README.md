@@ -1,26 +1,20 @@
-# BobVLM
+# BobVLM ✨👀
 
-BobVLM is a friendly 1.5 billion parameter Vision Language Model that combines powerful image understanding with natural language capabilities. Named with a touch of humor (partly from the author's initials and partly because it sounds like your friendly neighborhood AI), BobVLM excels at detailed image captioning and visual question answering.
+BobVLM is an ambitious passion project that experiments pre-training a good multimodal language model on limited resources and hardware and still achieve impressive performance. The result is a 1.5b model pre-trained on P100 GPU that is capable of detailed image description and moderate question answering.
 
-## Model Architecture
+***Find the link to the BobVLM Article on [Medium](https://medium.com/p/7d51099bfbcb/edit)***
+
+
+## Model Architecture 🔧
 ![Bob VLM diagram](https://github.com/user-attachments/assets/e212fb6b-d8c5-4c33-8170-753ec05979a3)
 
-BobVLM consists of three main components:
 
-1. **Vision Encoder**: Uses CLIP (clip-vit-large-patch14) for processing images into meaningful embeddings
-2. **Language Model**: Employs LLaMA (llama-3.2-1.3b) for generating coherent and contextually relevant text
-3. **Adapter Layer**: A 1.5M parameter MLP projection layer that acts as a "bilingual translator" between CLIP's embeddings and LLaMA's token space
-   - 3 layers with 500 nodes each
-   - 257 adapted image embeddings (following CLIP's final hidden state)
-
-
-### Training Approach
+### Training Approach 
 
 To maintain efficiency and accessibility:
 - Vision and language components are frozen
-- Only the adapter layer is trained
-- Supervised training approach, treating adapter training as finetuning
-- Inspired by Houlsby et al. (2019)'s work on MLP adapters for transfer learning
+- **Only the adapter layer is trained**
+- **Supervised training approach, treating adapter training as model finetuning**(Houlsby et al. (2019)'s work on MLP adapters for transfer learning)
 - Can be trained on accessible hardware (T4 or P100 GPUs)
 
 ## Features
