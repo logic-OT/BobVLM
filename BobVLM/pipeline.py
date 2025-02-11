@@ -2,7 +2,7 @@ from .processor import BobVLMProcessor
 from .model import load_model
 from PIL import Image
 import os
-from transformers.utils import load_image
+from transformers.image_utils import load_image
 from typing import Union, List
 
 def pipeline(model_name="selfDotOsman/BobVLM-1.5b", device=None):
