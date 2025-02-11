@@ -3,6 +3,7 @@
 BobVLM is a friendly 1.5 billion parameter Vision Language Model that combines powerful image understanding with natural language capabilities. Named with a touch of humor (partly from the author's initials and partly because it sounds like your friendly neighborhood AI), BobVLM excels at detailed image captioning and visual question answering.
 
 ## Model Architecture
+![Bob VLM diagram](https://github.com/user-attachments/assets/e212fb6b-d8c5-4c33-8170-753ec05979a3)
 
 BobVLM consists of three main components:
 
@@ -11,6 +12,7 @@ BobVLM consists of three main components:
 3. **Adapter Layer**: A 1.5M parameter MLP projection layer that acts as a "bilingual translator" between CLIP's embeddings and LLaMA's token space
    - 3 layers with 500 nodes each
    - 257 adapted image embeddings (following CLIP's final hidden state)
+
 
 ### Training Approach
 
