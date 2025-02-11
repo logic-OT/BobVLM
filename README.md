@@ -8,7 +8,7 @@ BobVLM is an ambitious passion project that experiments pre-training a good mult
 ![Bob VLM diagram](https://github.com/user-attachments/assets/e212fb6b-d8c5-4c33-8170-753ec05979a3)
 
 
-### Training Approach 
+### Training Approach 📖
 
 To maintain efficiency and accessibility:
 - Vision and language components are frozen
@@ -16,19 +16,8 @@ To maintain efficiency and accessibility:
 - **Supervised training approach, treating adapter training as model finetuning**(Houlsby et al. (2019)'s work on MLP adapters for transfer learning)
 - Can be trained on accessible hardware (T4 or P100 GPUs)
 
-## Features
 
-- Supports multiple image input formats:
-  - Local image files
-  - Image URLs
-  - PIL Image objects
-- Detailed image captioning
-- Visual question answering
-- Flexible chat interface
-- Built on the Hugging Face Transformers library
-- Resource-efficient design
-
-## Installation
+## Installation 🔧
 
 You can install the package directly from GitHub:
 
