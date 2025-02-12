@@ -51,14 +51,14 @@ response = pipe(
         {"role": "system", "content": "You are an image understanding assistant. You can see and interpret images in fine detail"},
         {"role": "user", "content": "What's in this image?"},
     ],
-    images="https://media.istockphoto.com/id/155439315/photo/passenger-airplane-flying-above-clouds-during-sunset.jpg"
+    images="http://images.cocodataset.org/train2017/000000436349.jpg"
 )
 
 print(response)
 ```
 **Model Output**
 ```
-The image depicts a plane flying over a mountainous landscape, with a large airplane (a Boeing 737) in the foreground. The plane is flying towards the horizon, and the mountain range is visible in the background.<|eot_id|>
+The image shows a large group of trucks parked in a parking lot, with a variety of vehicles, including semi-trucks, buses, and vans, all lined up in a neat and organized manner. The trucks are parked in a row, with some of them having their doors open, while others are closed. The vehicles are all yellow, with some having white or black stripes.<|eot_id|>'
 ```
 ### Different Input Types
 
