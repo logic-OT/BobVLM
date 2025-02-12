@@ -22,13 +22,13 @@ Make sure you run with GPU/cuda. Works on Colab or any other service.
 <br><br>You can install the package directly from GitHub:
 
 ```bash
-pip install git+https://github.com/selfDotOsman/BobVLM.git
+pip install git+https://github.com/logic-ot/BobVLM.git
 ```
 
 or in a notebook
 
 ```
-!pip install git+https://github.com/selfDotOsman/BobVLM.git
+!pip install git+https://github.com/logic-ot/BobVLM.git
 ```
 
 ## Usage
