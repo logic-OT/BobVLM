@@ -17,6 +17,10 @@ To maintain efficiency and accessibility:
 - **Supervised training approach, treating adapter training as model finetuning**(Houlsby et al. (2019)'s work on MLP adapters for transfer learning)
 - Can be trained on accessible hardware (T4 or P100 GPUs)
 
+## Model Shortcomings 🥲
+1. Training Data (coco mainly). The model was train on mainly coco images. Therefore the model thrives with scenes rather than close up images or animations
+2. Question Answering: Question answering is just okay. Its not the most accurate
+
 
 ## Installation 🔧
 Make sure you run with GPU/cuda. Works on Colab or any other service.
@@ -117,10 +121,6 @@ response = pipe(
 ## Model Card
 
 For more detailed information about the model, visit the [Hugging Face model page](https://huggingface.co/selfDotOsman/BobVLM-1.5b).
-
-## Shortcomings
-1. Training Data (coco mainly). So model thrives with scenes rather than close up images or animations
-2. Accurate QA
 
 
 ## License
