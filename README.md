@@ -3,6 +3,7 @@
 
 BobVLM is an ambitious passion project that experiments pre-training a good multimodal language model on limited resources and hardware and still achieve impressive performance. The result is a 1.5b model pre-trained on P100 GPU that is capable of detailed image description and moderate question answering.
 
+***Don't forget to star the repo if you find this useful*** 🌟
 
 ## Model Architecture 🔧
 ![Bob VLM diagram](https://github.com/user-attachments/assets/e212fb6b-d8c5-4c33-8170-753ec05979a3)
