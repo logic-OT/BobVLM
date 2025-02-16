@@ -118,19 +118,10 @@ response = pipe(
 
 For more detailed information about the model, visit the [Hugging Face model page](https://huggingface.co/selfDotOsman/BobVLM-1.5b).
 
-## Citation
+## Shortcomings
+1. Training Data (coco mainly). So model thrives with scenes rather than close up images or animations
+2. Accurate QA
 
-If you use BobVLM in your research, please cite:
-
-```bibtex
-@misc{bobvlm2024,
-  author = {selfDotOsman},
-  title = {BobVLM: A Lightweight Vision Language Model with Efficient Adapter Architecture},
-  year = {2024},
-  publisher = {Hugging Face},
-  howpublished = {\url{https://huggingface.co/selfDotOsman/BobVLM-1.5b}}
-}
-```
 
 ## License
 
